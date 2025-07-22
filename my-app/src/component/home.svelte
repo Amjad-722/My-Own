@@ -42,12 +42,13 @@
 			<li>
 				<a href="/services" class="transition-colors hover:text-green-300">Services</a>
 			</li>
+      <li>
+				<a href="/about" class="transition-colors hover:text-green-300">About</a>
+			</li>
 			<li>
 				<a href="/contact" class="transition-colors hover:text-green-300">Contact</a>
 			</li>
-			<li>
-				<a href="/about" class="transition-colors hover:text-green-300">About</a>
-			</li>
+		
 		</ul>
 	</nav>
 

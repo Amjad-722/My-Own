@@ -6,8 +6,13 @@
       icon: '🌐',
       features: ['Responsive Design', 'Modern Frameworks', 'Performance Optimized', 'SEO Friendly'],
       price: 'Starting at $500'
-    },
-    {
+    }, {
+      title: 'Svelte Development',
+      description: 'Lightning-fast Svelte applications with minimal bundle size',
+      icon: '🔥',
+      features: ['SvelteKit', 'Stores Management', 'Server-Side Rendering', 'Animations'],
+      price: 'Starting at $600'
+    },{
       title: 'React Development',
       description: 'Interactive React applications with state management and modern hooks',
       icon: '⚛️',
@@ -21,13 +26,7 @@
       features: ['Vue 3 Composition API', 'Vuex Store', 'Router Setup', 'Component Library'],
       price: 'Starting at $700'
     },
-    {
-      title: 'Svelte Development',
-      description: 'Lightning-fast Svelte applications with minimal bundle size',
-      icon: '🔥',
-      features: ['SvelteKit', 'Stores Management', 'Server-Side Rendering', 'Animations'],
-      price: 'Starting at $600'
-    },
+   
     {
       title: 'UI/UX Design',
       description: 'Beautiful and intuitive user interfaces that convert visitors',
@@ -41,7 +40,7 @@
       icon: '⚡',
       features: ['Speed Optimization', 'SEO Audit', 'Code Refactoring', 'Analytics Setup'],
       price: 'Starting at $300'
-    }
+    } 
   ];
 </script>
 
