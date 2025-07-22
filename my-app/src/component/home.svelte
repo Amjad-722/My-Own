@@ -31,7 +31,7 @@
 	class="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"
 >
 	<!-- Background Pattern -->
-	<div class="absolute inset-0 opacity-20 bg-[url(/bg-img.JPG)] bg-cover bg-no-repeat"></div>
+	<div class="absolute inset-0 opacity-20 bg-[url(/bg-img.JPG)] bg-center bg-cover bg-no-repeat"></div>
 
 	<!-- Navigation -->
 	<nav class="relative z-10 flex justify-center py-6">
@@ -53,91 +53,100 @@
 	</nav>
 
 	<!-- Main Content -->
-	<div
-		class="relative z-10 flex min-h-[80vh] flex-col items-center justify-center px-4 text-center"
-	>
-		<!-- Profile Image -->
-		<div
-			class="mb-8 h-32 w-32 overflow-hidden rounded-full border-4 border-white/20 bg-gradient-to-r from-green-400 to-emerald-400 p-1 shadow-2xl"
-		>
-			<div class="h-full w-full overflow-hidden rounded-full bg-white">
-				<img
-					src="/my-profile.png"
-					alt="Amjad Ali - Front End Developer"
-					class="h-full w-full object-cover"
-				/>
+	<div class="relative z-10 grid min-h-[80vh] grid-cols-1 lg:grid-cols-2 items-center gap-12 px-4 lg:px-20">
+		<!-- Left Side - Content -->
+		<div class="flex flex-col items-start text-left space-y-8">
+			<!-- Main Heading -->
+			<h1 class="text-5xl font-bold leading-tight text-white lg:text-7xl">
+				Hi, I'm <span
+					class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"
+					>Amjad Ali</span
+				>
+			</h1>
+
+			<!-- Subtitle -->
+			<p class="max-w-2xl text-xl text-gray-300 lg:text-2xl">
+				A passionate <span class="font-semibold text-green-400">Front-End Developer</span> crafting beautiful,
+				responsive web experiences with modern technologies.
+			</p>
+
+			<!-- CTA Button -->
+			<button
+				on:click={() => (showMore = !showMore)}
+				class="transform rounded-full bg-gradient-to-r from-green-500 to-emerald-500 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-green-600 hover:to-emerald-600 hover:shadow-xl"
+			>
+				{showMore ? 'Show Less' : 'More About Me'}
+			</button>
+
+			<!-- Social Links -->
+			<div class="flex gap-6">
+				{#each socialLinks as link}
+					<a
+						href={link.url}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="group flex h-12 w-12 transform items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/20"
+						title={link.name}
+						aria-label={link.name}
+					>
+						<svg
+							class="h-6 w-6 fill-current text-gray-300 transition-colors group-hover:text-white"
+							viewBox="0 0 24 24"
+						>
+							<path d={link.icon} />
+						</svg>
+					</a>
+				{/each}
 			</div>
 		</div>
 
-		<!-- Main Heading -->
-		<h1 class="mb-6 text-5xl font-bold leading-tight text-white md:text-7xl">
-			Hi, I'm <span
-				class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"
-				>Amjad Ali</span
-			>
-		</h1>
+		<!-- Right Side - Profile Image -->
+		<div class="flex justify-center lg:justify-end">
+			<div class="relative">
+				<!-- Decorative Background Circle -->
+				<div class="absolute -inset-4 rounded-full bg-gradient-to-r from-green-400/20 to-emerald-400/20 blur-xl"></div>
+				
+				<!-- Profile Image Container -->
+				<div
+					class="relative h-80 w-80 overflow-hidden rounded-full border-4 border-white/20 bg-gradient-to-r from-green-400 to-emerald-400 p-2 shadow-2xl"
+				>
+					<div class="h-full w-full overflow-hidden rounded-full bg-white">
+						<img
+							src="/my-profile.png"
+							alt="Amjad Ali - Front End Developer"
+							class="h-full w-full object-cover"
+						/>
+					</div>
+				</div>
+				
+				<!-- Floating Elements -->
+				<div class="absolute -top-4 -right-4 h-8 w-8 rounded-full bg-green-400 animate-pulse"></div>
+				<div class="absolute -bottom-6 -left-6 h-6 w-6 rounded-full bg-emerald-400 animate-bounce"></div>
+			</div>
+		</div>
+	</div>
 
-		<!-- Subtitle -->
-		<p class="mb-8 max-w-2xl text-xl text-gray-300 md:text-2xl">
-			A passionate <span class="font-semibold text-green-400">Front-End Developer</span> crafting beautiful,
-			responsive web experiences with modern technologies.
-		</p>
-
-		<!-- CTA Button -->
-		<button
-			on:click={() => (showMore = !showMore)}
-			class="mb-12 transform rounded-full bg-gradient-to-r from-green-500 to-emerald-500 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-green-600 hover:to-emerald-600 hover:shadow-xl"
-		>
-			{showMore ? 'Show Less' : 'More About Me'}
-		</button>
-
-		<!-- Additional Info (Toggleable) -->
-		{#if showMore}
-			<div
-				class="mb-12 max-w-2xl rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-sm"
-			>
-				<h3 class="mb-4 text-2xl font-bold text-white">About Me</h3>
-				<p class="leading-relaxed text-gray-300">
+	<!-- Additional Info Section (Full Width) -->
+	{#if showMore}
+		<div class="relative z-10 px-4 lg:px-20 pb-12">
+			<div class="max-w-4xl mx-auto rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-sm">
+				<h3 class="mb-6 text-3xl font-bold text-white text-center">About Me</h3>
+				<p class="leading-relaxed text-gray-300 text-lg mb-8 text-center">
 					I specialize in creating modern, responsive websites using cutting-edge technologies like
 					React, Vue, Svelte, and more. With a keen eye for design and a passion for clean code, I
 					bring ideas to life through engaging user experiences.
 				</p>
-				<div class="mt-6 flex flex-wrap justify-center gap-3">
-					<span class="rounded-full bg-purple-500/20 px-3 py-1 text-sm text-purple-300"
-						>JavaScript</span
-					>
-					<span class="rounded-full bg-blue-500/20 px-3 py-1 text-sm text-blue-300">React</span>
-					<span class="rounded-full bg-green-500/20 px-3 py-1 text-sm text-green-300">Vue.js</span>
-					<span class="rounded-full bg-orange-500/20 px-3 py-1 text-sm text-orange-300">Svelte</span
-					>
-					<span class="rounded-full bg-pink-500/20 px-3 py-1 text-sm text-pink-300"
-						>Tailwind CSS</span
-					>
+				<div class="flex flex-wrap justify-center gap-4">
+					<span class="rounded-full bg-green-500/20 px-4 py-2 text-sm text-green-300 font-medium border border-green-500/30">JavaScript</span>
+					<span class="rounded-full bg-green-500/20 px-4 py-2 text-sm text-green-300 font-medium border border-green-500/30">React</span>
+					<span class="rounded-full bg-green-500/20 px-4 py-2 text-sm text-green-300 font-medium border border-green-500/30">Vue.js</span>
+					<span class="rounded-full bg-green-500/20 px-4 py-2 text-sm text-green-300 font-medium border border-green-500/30">Svelte</span>
+					<span class="rounded-full bg-green-500/20 px-4 py-2 text-sm text-green-300 font-medium border border-green-500/30">Tailwind CSS</span>
+					<span class="rounded-full bg-green-500/20 px-4 py-2 text-sm text-green-300 font-medium border border-green-500/30">Node.js</span>
 				</div>
 			</div>
-		{/if}
-
-		<!-- Social Links -->
-		<div class="flex gap-6">
-			{#each socialLinks as link}
-				<a
-					href={link.url}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="group flex h-12 w-12 transform items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/20"
-					title={link.name}
-					aria-label={link.name}
-				>
-					<svg
-						class="h-6 w-6 fill-current text-gray-300 transition-colors group-hover:text-white"
-						viewBox="0 0 24 24"
-					>
-						<path d={link.icon} />
-					</svg>
-				</a>
-			{/each}
 		</div>
-	</div>
+	{/if}
 
 	<!-- Scroll Indicator -->
 	<div class="absolute bottom-8 left-1/2 -translate-x-1/2 transform animate-bounce">
