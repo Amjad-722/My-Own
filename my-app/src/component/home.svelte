@@ -28,7 +28,7 @@
 
 <!-- Hero Section -->
 <div
-	class="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+	class="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"
 >
 	<!-- Background Pattern -->
 	<div class="absolute inset-0 opacity-20 bg-[url(/bg-img.JPG)] bg-cover bg-no-repeat"></div>
@@ -37,19 +37,16 @@
 	<nav class="relative z-10 flex justify-center py-6">
 		<ul class="flex gap-8 font-medium text-white">
 			<li>
-				<a href="#home" class="cursor-pointer transition-colors hover:text-purple-300">Home</a>
+				<a href="/" class="font-semibold text-green-400">Home</a>
 			</li>
 			<li>
-				<a href="#services" class="cursor-pointer transition-colors hover:text-purple-300"
-					>Services</a
-				>
+				<a href="/services" class="transition-colors hover:text-green-300">Services</a>
 			</li>
 			<li>
-				<a href="#contact" class="cursor-pointer transition-colors hover:text-purple-300">Contact</a
-				>
+				<a href="/contact" class="transition-colors hover:text-green-300">Contact</a>
 			</li>
 			<li>
-				<a href="#about" class="cursor-pointer transition-colors hover:text-purple-300">About</a>
+				<a href="/about" class="transition-colors hover:text-green-300">About</a>
 			</li>
 		</ul>
 	</nav>
@@ -60,7 +57,7 @@
 	>
 		<!-- Profile Image -->
 		<div
-			class="mb-8 h-32 w-32 overflow-hidden rounded-full border-4 border-white/20 bg-gradient-to-r from-purple-400 to-pink-400 p-1 shadow-2xl"
+			class="mb-8 h-32 w-32 overflow-hidden rounded-full border-4 border-white/20 bg-gradient-to-r from-green-400 to-emerald-400 p-1 shadow-2xl"
 		>
 			<div class="h-full w-full overflow-hidden rounded-full bg-white">
 				<img
@@ -74,21 +71,21 @@
 		<!-- Main Heading -->
 		<h1 class="mb-6 text-5xl font-bold leading-tight text-white md:text-7xl">
 			Hi, I'm <span
-				class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+				class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"
 				>Amjad Ali</span
 			>
 		</h1>
 
 		<!-- Subtitle -->
 		<p class="mb-8 max-w-2xl text-xl text-gray-300 md:text-2xl">
-			A passionate <span class="font-semibold text-purple-400">Front-End Developer</span> crafting beautiful,
+			A passionate <span class="font-semibold text-green-400">Front-End Developer</span> crafting beautiful,
 			responsive web experiences with modern technologies.
 		</p>
 
 		<!-- CTA Button -->
 		<button
 			on:click={() => (showMore = !showMore)}
-			class="mb-12 transform rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-purple-600 hover:to-pink-600 hover:shadow-xl"
+			class="mb-12 transform rounded-full bg-gradient-to-r from-green-500 to-emerald-500 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-green-600 hover:to-emerald-600 hover:shadow-xl"
 		>
 			{showMore ? 'Show Less' : 'More About Me'}
 		</button>
