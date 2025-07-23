@@ -49,15 +49,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
-  <!-- Navigation -->
-  <nav class="relative z-10 flex justify-center py-6">
-    <ul class="flex gap-8 text-white font-medium">
-      <li><a href="/" class="hover:text-green-300 transition-colors">Home</a></li>
-      <li><a href="/services" class="text-green-400 font-semibold">Services</a></li>
-      <li><a href="/contact" class="hover:text-green-300 transition-colors">Contact</a></li>
-      <li><a href="/about" class="hover:text-green-300 transition-colors">About</a></li>
-    </ul>
-  </nav>
+ 
 
   <div class="container mx-auto px-4 py-12">
     <!-- Header -->
