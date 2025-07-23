@@ -66,7 +66,7 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
       {#each services as service}
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105">
-          <div class="text-4xl mb-4">{service.icon}</div>
+          <!-- <div class="text-4xl mb-4">{service.icon}</div> -->
           <h3 class="text-2xl font-bold text-white mb-4">{service.title}</h3>
           <p class="text-gray-300 mb-6">{service.description}</p>
           
