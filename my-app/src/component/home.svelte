@@ -34,23 +34,7 @@
 	<div class="absolute inset-0 opacity-20 bg-[url(/bg-img.JPG)] bg-center bg-cover bg-no-repeat"></div>
 
 	<!-- Navigation -->
-	<nav class="relative z-10 flex justify-center py-6">
-		<ul class="flex gap-8 font-medium text-white">
-			<li>
-				<a href="/" class="font-semibold text-green-400">Home</a>
-			</li>
-			<li>
-				<a href="/services" class="transition-colors hover:text-green-300">Services</a>
-			</li>
-      <li>
-				<a href="/about" class="transition-colors hover:text-green-300">About</a>
-			</li>
-			<li>
-				<a href="/contact" class="transition-colors hover:text-green-300">Contact</a>
-			</li>
-		
-		</ul>
-	</nav>
+	
 
 	<!-- Main Content -->
 	<div class="relative z-10 grid min-h-[80vh] grid-cols-1 lg:grid-cols-2 items-center gap-12 px-4 lg:px-20">
