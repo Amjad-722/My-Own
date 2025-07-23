@@ -1,7 +1,7 @@
 <script>
 	let showMore = false;
 
- export	const socialLinks = [
+ 	const socialLinks = [
 		{
 			name: 'GitHub',
 			url: 'https://github.com/Amjad-722',
