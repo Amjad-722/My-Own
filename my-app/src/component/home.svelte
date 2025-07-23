@@ -1,5 +1,16 @@
 <script>
 	let showMore = false;
+	
+	const skills = [
+		'JavaScript',
+		'React',
+		'Vue.js',
+		'Svelte',
+		'Tailwind CSS',
+		'Node.js',
+		'TypeScript',
+		'MongoDB'
+	];
 
  	const socialLinks = [
 		{
@@ -121,26 +132,13 @@
 					bring ideas to life through engaging user experiences.
 				</p>
 				<div class="flex flex-wrap justify-center gap-4">
-					<span class="rounded-full bg-green-500/20 px-4 py-2 text-sm text-green-300 font-medium border border-green-500/30">JavaScript</span>
-					<span class="rounded-full bg-green-500/20 px-4 py-2 text-sm text-green-300 font-medium border border-green-500/30">React</span>
-					<span class="rounded-full bg-green-500/20 px-4 py-2 text-sm text-green-300 font-medium border border-green-500/30">Vue.js</span>
-					<span class="rounded-full bg-green-500/20 px-4 py-2 text-sm text-green-300 font-medium border border-green-500/30">Svelte</span>
-					<span class="rounded-full bg-green-500/20 px-4 py-2 text-sm text-green-300 font-medium border border-green-500/30">Tailwind CSS</span>
-					<span class="rounded-full bg-green-500/20 px-4 py-2 text-sm text-green-300 font-medium border border-green-500/30">Node.js</span>
+					{#each skills as skill}
+						<span class="rounded-full bg-green-500/20 px-4 py-2 text-sm text-green-300 font-medium border border-green-500/30">
+							{skill}
+						</span>
+					{/each}
 				</div>
 			</div>
 		</div>
 	{/if}
-
-	<!-- Scroll Indicator -->
-	<div class="absolute bottom-8 left-1/2 -translate-x-1/2 transform animate-bounce">
-		<svg class="h-6 w-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M19 14l-7 7m0 0l-7-7m7 7V3"
-			/>
-		</svg>
-	</div>
 </div>
