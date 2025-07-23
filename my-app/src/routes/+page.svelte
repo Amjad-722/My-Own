@@ -6,6 +6,6 @@
 
 
 
-<main class="h-dvh w-full bg-gray-400">
+<main class=" w-full bg-gray-400">
    <Home/>
 </main>
