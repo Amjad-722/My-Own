@@ -49,15 +49,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
-  <!-- Navigation -->
-  <nav class="relative z-10 flex justify-center py-6">
-    <ul class="flex gap-8 text-white font-medium">
-      <li><a href="/" class="hover:text-green-300 transition-colors">Home</a></li>
-      <li><a href="/services" class="text-green-400 font-semibold">Services</a></li>
-      <li><a href="/contact" class="hover:text-green-300 transition-colors">Contact</a></li>
-      <li><a href="/about" class="hover:text-green-300 transition-colors">About</a></li>
-    </ul>
-  </nav>
+ 
 
   <div class="container mx-auto px-4 py-12">
     <!-- Header -->
@@ -74,7 +66,7 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
       {#each services as service}
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105">
-          <div class="text-4xl mb-4">{service.icon}</div>
+          <!-- <div class="text-4xl mb-4">{service.icon}</div> -->
           <h3 class="text-2xl font-bold text-white mb-4">{service.title}</h3>
           <p class="text-gray-300 mb-6">{service.description}</p>
           
