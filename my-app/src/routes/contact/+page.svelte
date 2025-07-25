@@ -40,20 +40,7 @@
 		
 	];
 
-	async function handleSubmit() {
-		isSubmitting = true;
-
-		// Simulate form submission
-		setTimeout(() => {
-			isSubmitting = false;
-			submitMessage = 'Thank you! Your message has been sent successfully.';
-			formData = { name: '', email: '', subject: '', message: '' };
-
-			setTimeout(() => {
-				submitMessage = '';
-			}, 5000);
-		}, 2000);
-	}
+	
 	 
 
    
@@ -63,23 +50,25 @@
 
         const templateParams = {
             from_name: formData.name,
-            from_email: formData.email,
+			from_email: formData.email,
+            from_subject: formData.subject,
             message: formData.message
         };
 
         try {
             await emailjs.send(
-                'service_jqzcltp',      // replace with your EmailJS service ID
-                'template_3w0ygcj',     // replace with your EmailJS template ID
+                'service_jqzcltp',     
+                'template_86n1rhl',    
                 templateParams,
-                '86EJfc1g2KUUMUUzA'          // replace with your EmailJS public key
+                '86EJfc1g2KUUMUUzA'         
             );
             status = 'Message sent!';
             formData.name = '';
             formData.email = '';
+			formData.subject = '';
            formData.message = '';
         } catch (error) {
-            status = 'Failed to send message.';
+            error= 'Failed to send message.';
         }
     }
 </script>
@@ -116,7 +105,7 @@
 					</div>
 				{/if}
 
-				<form on:submit={handleSubmit} class="space-y-6">
+				<form on:submit={sendEmail} class="space-y-6">
 					<div>
 						<label for="name" class="mb-2 block font-medium text-white">Name</label>
 						<input
