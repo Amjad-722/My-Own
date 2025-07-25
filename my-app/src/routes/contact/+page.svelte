@@ -1,10 +1,15 @@
-<script>
+
+<script lang="ts">
+	import emailjs from 'emailjs-com';
 	let formData = {
 		name: '',
 		email: '',
 		subject: '',
 		message: ''
 	};
+
+
+	 
 
 	let isSubmitting = false;
 	let submitMessage = '';
@@ -49,6 +54,34 @@
 			}, 5000);
 		}, 2000);
 	}
+	 
+
+   
+
+    async function sendEmail(e: Event) {
+        e.preventDefault();
+
+        const templateParams = {
+            from_name: formData.name,
+            from_email: formData.email,
+            message: formData.message
+        };
+
+        try {
+            await emailjs.send(
+                'service_jqzcltp',      // replace with your EmailJS service ID
+                'template_3w0ygcj',     // replace with your EmailJS template ID
+                templateParams,
+                '86EJfc1g2KUUMUUzA'          // replace with your EmailJS public key
+            );
+            status = 'Message sent!';
+            formData.name = '';
+            formData.email = '';
+           formData.message = '';
+        } catch (error) {
+            status = 'Failed to send message.';
+        }
+    }
 </script>
 
 <svelte:head>

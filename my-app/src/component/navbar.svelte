@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
-	// Normalize paths to handle trailing slashes
 	$: currentPath = $page.url.pathname.replace(/\/$/, '');
 
 	const navItems = [
@@ -12,18 +11,11 @@
 	];
 
 	function isActive(path: string) {
-		// Normalize the item path for comparison
 		const normalizedItemPath = path.replace(/\/$/, '');
 		return currentPath === normalizedItemPath;
 	}
 
-	// Debug logging to track changes
-	$: {
-		console.log('Current path:', currentPath);
-		navItems.forEach(item => {
-			console.log(`${item.name} (${item.path}): ${isActive(item.path) ? 'ACTIVE' : 'inactive'}`);
-		});
-	}
+	
 </script>
 
 <div class="overflow-hidden bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
