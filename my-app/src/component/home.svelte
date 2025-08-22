@@ -1,4 +1,6 @@
 <script>
+	import { lazy } from "../utils/utils";
+
 	let showMore = false;
 	
 	const skills = [
@@ -106,7 +108,8 @@
 					class="relative h-80 w-80 overflow-hidden rounded-full border-4 border-white/20 bg-gradient-to-r from-green-400 to-emerald-400 p-2 shadow-2xl"
 				>
 					<div class="h-full w-full overflow-hidden rounded-full bg-white">
-						<img
+						<img 
+						 use:lazy={{rootMargin: '-100px'}} 
 							src="/my-profile.png"
 							alt="Amjad Ali - Front End Developer"
 							class="h-full w-full object-cover"
