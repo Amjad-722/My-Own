@@ -50,7 +50,7 @@
 	
 
 	<!-- Main Content -->
-	<div class="relative z-10 grid min-h-[80vh] grid-cols-1 lg:grid-cols-2 items-center gap-12 px-4 lg:px-20">
+	<div class="relative z-10 grid min-h-[70vh] grid-cols-1 lg:grid-cols-2 items-center gap-12 px-4 lg:px-16">
 		<!-- Left Side - Content -->
 		<div class="flex flex-col items-start text-left space-y-8">
 			<!-- Main Heading -->
@@ -124,9 +124,10 @@
 		</div>
 	</div>
 
-	<!-- Additional Info Section (Full Width) -->
 	{#if showMore}
-		<div class="relative z-10 px-4 lg:px-20 pb-12">
+	<div class="absolute  left-6 z-20 flex justify-center ">
+
+	
 			<div class="max-w-4xl mx-auto rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-sm">
 				<h3 class="mb-6 text-3xl font-bold text-white text-center">About Me</h3>
 				<p class="leading-relaxed text-gray-300 text-lg mb-8 text-center">
@@ -142,6 +143,6 @@
 					{/each}
 				</div>
 			</div>
-		</div>
+			</div>
 	{/if}
 </div>
